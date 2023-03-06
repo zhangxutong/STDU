@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".denglu">
-
+    tools:context=".tixing">
     <EditText
-        android:id="@+id/zhanghao"
+        android:id="@+id/shijian"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:hint="账号"
+        android:hint="事件"
         android:inputType="text"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,47 +18,55 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/mima"
+        android:id="@+id/shi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="密码"
-        android:imeActionLabel="登录"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
+        android:hint="时间——时"
+        android:inputType="number"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zhanghao" />
+        app:layout_constraintTop_toBottomOf="@+id/shijian" />
+    <EditText
+        android:id="@+id/feng"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="时间-分"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shi" />
 
     <Button
-        android:id="@+id/denglu"
+        android:id="@+id/tixing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
         android:enabled="true"
-        android:text="登录"
+        android:text="添加提醒"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mima"
+        app:layout_constraintTop_toBottomOf="@+id/feng"
         app:layout_constraintVertical_bias="0.2" />
-
     <Button
-        android:id="@+id/zhuce"
+        android:id="@+id/zhujiemian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
         android:enabled="true"
-        android:text="注册"
+        android:text="主界面"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/denglu"
+        app:layout_constraintTop_toBottomOf="@+id/tixing"
         app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
