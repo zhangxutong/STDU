@@ -122,7 +122,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         }
 
         if(riqi_nian==year&&riqi_yue==month&&riqi_ri==day){
-            jianchitianshu++;
+            //jianchitianshu++;
             return jianchitianshu;
         }
 

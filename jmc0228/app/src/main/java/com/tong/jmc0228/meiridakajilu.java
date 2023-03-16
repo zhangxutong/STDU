@@ -9,14 +9,15 @@ import android.widget.TextView;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class liulan extends AppCompatActivity {
+public class meiridakajilu extends AppCompatActivity {
     private DBOpenHelper dbo;
     private DBUtil util;
     private TextView liulan0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_liulan);
+        setContentView(R.layout.activity_meiridakajilu);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
@@ -32,13 +33,13 @@ public class liulan extends AppCompatActivity {
         }
         for (int i = 0; i < data.size(); i++) {
             meirizongjie mrzj = data.get(i);
-            if(mrzj.getZhanghao().equals(dbo.getZhanghao_now())) {
-                liulan = liulan + "日期：" + mrzj.getRiqi_nian() + "年" + mrzj.getRiqi_yue() + "月" + mrzj.getRiqi_ri() + "日\t";
-                liulan = liulan + "每日关键字：" + mrzj.getGuanjianzi() + "\t";
-                liulan = liulan + "每日总结：" + mrzj.getZongjie() + "\t";
-                liulan = liulan + "坚持天数：" + mrzj.getJianchitianshu() + "\t";
-                liulan = liulan + "最长天数：" + mrzj.getZuichangtianshu() + "\t；\n";
-            }
+            liulan = liulan + "日期：" + mrzj.getRiqi_nian() + "年" + mrzj.getRiqi_yue() + "月" + mrzj.getRiqi_ri() + "日\t";
+            liulan = liulan + "每日关键字：" + mrzj.getGuanjianzi() + "\t";
+            liulan = liulan + "每日总结：" + mrzj.getZongjie() + "\t";
+            liulan = liulan + "坚持天数：" + mrzj.getJianchitianshu() + "\t";
+            liulan = liulan + "最长天数：" + mrzj.getZuichangtianshu() + "\t";
+            liulan = liulan + "账号：" + mrzj.getZhanghao() + "\t；\n";
+
         }
         liulan0.setText(liulan);
     }
